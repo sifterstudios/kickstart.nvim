@@ -18,7 +18,7 @@ return {
     vim.fn.sign_define("DiagnosticSignHint",
       { text = "", texthl = "DiagnosticSignHint" })
     require('neo-tree').setup({
-      close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
+      close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
       popup_border_style = "rounded",
       enable_git_status = true,
       enable_diagnostics = true,
@@ -220,9 +220,52 @@ return {
             ["gg"] = "git_commit_and_push",
           }
         }
-      }
+      },
+
+      event_handlers = {
+
+        {
+          event = "file_opened",
+          ---@diagnostic disable-next-line: unused-local
+          handler = function(file_path)
+            --auto close
+            require("neo-tree").close_all()
+          end
+
+
+        }
+      },
+      filesystem = {
+        components = {
+          ---@diagnostic disable-next-line: unused-local
+          harpoon_index = function(config, node, state)
+            local Marked = require("harpoon.mark")
+            local path = node:get_id()
+            local succuss, index = pcall(Marked.get_index_of, path)
+            if succuss and index and index > 0 then
+              return {
+                text = string.format(" ⥤ %d", index), -- <-- Add your favorite harpoon like arrow here
+                highlight = config.highlight or "NeoTreeDirectoryIcon",
+              }
+            else
+              return {}
+            end
+          end
+        },
+        renderers = {
+          file = {
+            { "icon" },
+            { "name", use_git_status_colors = true },
+            { "harpoon_index" }, --> This is what actually adds the component in where you want it
+            { "diagnostics" },
+            { "git_status", highlight = "NeoTreeDimText" },
+          }
+        }
+      },
     })
 
     vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
+
+
   end
 }
