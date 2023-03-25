@@ -14,8 +14,9 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- Go to next/previous error line
-vim.keymap.set("n", "<leader>x", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>X", "<cmd>lprev<CR>zz")
+vim.keymap.set("n", "<leader>o", "<cmd>lnext<CR>zz")
+vim.keymap.set("n", "<leader>O", "<cmd>lprev<CR>zz")
+
 
 -- Paste from clipboard
 vim.keymap.set("x", "<leader>p", [["_dP]])
@@ -25,8 +26,8 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- Toggle twilight
--- vim.keymap.set("n", "<leader>tt", "<cmd>Twilight<cr>",
--- 	{ silent = true, noremap = true })
+vim.keymap.set("n", "<leader>tt", "<cmd>Twilight<cr>",
+	{ silent = true, noremap = true })
 
 -- Toggle ZenMode
 vim.keymap.set("n", "<leader>zz", "<cmd>ZenMode<cr>",
