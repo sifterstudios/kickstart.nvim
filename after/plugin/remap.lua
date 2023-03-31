@@ -17,6 +17,17 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<leader>o", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>O", "<cmd>lprev<CR>zz")
 
+-- -- RADICAL: Remap [] to < > !!!
+vim.keymap.set({ "v", "o", "x" }, "<leader>,", "[")
+vim.keymap.set({ "v", "o", "x" }, "<leader>.", "[")
+vim.cmd([[
+nmap . ]
+nmap . ]
+omap . ]
+omap , [
+xmap , [
+xmap , [
+]])
 
 -- Paste from clipboard
 vim.keymap.set("x", "<leader>p", [["_dP]])
