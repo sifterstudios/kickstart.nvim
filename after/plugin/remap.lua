@@ -18,8 +18,8 @@ vim.keymap.set("n", "<leader>o", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>O", "<cmd>lprev<CR>zz")
 
 -- -- RADICAL: Remap [] to < > !!!
-vim.keymap.set({ "v", "o", "x" }, "<leader>,", "[")
-vim.keymap.set({ "v", "o", "x" }, "<leader>.", "[")
+vim.keymap.set({ "v", "o", "x" }, ",", "[")
+vim.keymap.set({ "v", "o", "x" }, ".", "]")
 vim.cmd([[
 nmap . ]
 nmap . ]

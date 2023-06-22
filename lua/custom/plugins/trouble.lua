@@ -16,5 +16,4 @@ return {
         { silent = true, noremap = true })
     }
   end
-
 }
