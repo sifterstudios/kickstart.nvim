@@ -33,6 +33,20 @@ return {
       end
     end,
     opts = {
+      require("neo-tree").setup({
+        event_handlers = {
+
+          {
+            event = "file_opened",
+            handler = function(file_path)
+              -- auto close
+              -- vimc.cmd("Neotree close")
+              -- OR
+              require("neo-tree.command").execute({ action = "close" })
+            end
+          },
+
+        },
       -- TODO: Add close on open file
       sources = { "filesystem", "buffers", "git_status", "document_symbols" },
       open_files_do_not_replace_types = { "terminal", "Trouble", "qf", "Outline" },
