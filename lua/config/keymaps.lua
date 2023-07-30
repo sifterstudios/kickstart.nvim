@@ -12,22 +12,12 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
--- Go to next/previous error line
-vim.keymap.set("n", "<leader>o", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>O", "<cmd>lprev<CR>zz")
-
 -- copy to clipboard: asbjornHaland
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
+--vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+--vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- Get a list of repos (and create new) tmux session on enter
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-
--- Format document
-vim.keymap.set("n", "<leader>f", "<cmd>Format<CR>")
-
--- Search for word under cursor
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Make shell scripts runnable
 vim.keymap.set("n", "<leader>!", "<cmd>!chmod +x %<CR>", { silent = true })
