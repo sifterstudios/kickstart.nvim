@@ -22,6 +22,8 @@ vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 -- Make shell scripts runnable
 vim.keymap.set("n", "<leader>!", "<cmd>!chmod +x %<CR>", { silent = true })
 
--- Set backspace and shift-backspace to ctrl-o and ctrl-i
-vim.keymap.set("n", "<BS>", "<C-o>")
-vim.keymap.set("n", "<S-BS>", "<C-i>")
+-- Toggle twilight
+vim.keymap.set("n", "<leader>zt", "<cmd>Twilight<cr>", { silent = true, noremap = true })
+
+-- Toggle ZenMode
+vim.keymap.set("n", "<leader>zz", "<cmd>ZenMode<cr>", { silent = true, noremap = true })
