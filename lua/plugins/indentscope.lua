@@ -8,7 +8,7 @@ return {
       -- symbol = "▏",
       symbol = "│",
       draw = {
-        delay = 10,
+        delay = 0,
       },
       options = { try_as_border = true },
     },
