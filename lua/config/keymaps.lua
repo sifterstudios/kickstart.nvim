@@ -21,6 +21,9 @@ vim.keymap.set("n", "<leader>!", "<cmd>!chmod +x %<CR>", { silent = true })
 -- Toggle twilight
 vim.keymap.set("n", "<leader>zt", "<cmd>Twilight<cr>", { silent = true, noremap = true })
 
+-- Run go-file
+vim.keymap.set("n", "<leader>rg", "<cmd>!go run %<cr>", { silent = true, noremap = true })
+
 -- Toggle ZenMode
 vim.keymap.set("n", "<leader>zz", "<cmd>ZenMode<cr>", { silent = true, noremap = true })
 -- Copy whole file
