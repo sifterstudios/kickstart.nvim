@@ -4,4 +4,4 @@
 
 vim.opt.guicursor = ""
 vim.opt.relativenumber = true
--- vim.g.minipairs_disable = true
+vim.g.minipairs_disable = true
