@@ -26,13 +26,19 @@ vim.keymap.set("n", "-", "<cmd>Oil<cr>", { silent = true, noremap = true })
 
 -- Toggle ZenMode
 vim.keymap.set("n", "<leader>zz", "<cmd>ZenMode<cr>", { silent = true, noremap = true })
+--
 -- Copy whole file
 vim.keymap.set("n", "<leader>Y", "ggVGy", { silent = true, noremap = true })
 
--- Testing of strange bug with Escape/Ctrl key on my keyboard
-vim.keymap.del("n", "<A-j>")
-vim.keymap.del("n", "<A-k>")
-vim.keymap.del("i", "<A-j>")
-vim.keymap.del("i", "<A-k>")
-vim.keymap.del("v", "<A-j>")
-vim.keymap.del("v", "<A-k>")
+-- Delete Traditional Save command
+vim.keymap.del("v", "<C-s>")
+
+-- TODO: Add Harpoon commands
+-- TODO: Add Copilot commands
+-- TODO: Add show usages command
+-- TODO: Add rename file to leader fr
+-- TODO: Bookmark commands
+-- TODO: Nice to have: move argument left or right in method signature
+-- TODO: Zooming of font / terminal, might be a ghostty setting
+-- TODO: Get Zen to work again
+--
