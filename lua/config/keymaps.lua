@@ -41,4 +41,3 @@ vim.keymap.del("v", "<C-s>")
 -- TODO: Nice to have: move argument left or right in method signature
 -- TODO: Zooming of font / terminal, might be a ghostty setting
 -- TODO: Get Zen to work again
---
